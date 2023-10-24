@@ -1,8 +1,11 @@
 [
 null,
-null,
+{"id":1,"expanded":true,"name":"tower","order":4,"parentId":0,"scrollX":832,"scrollY":640},
 {"id":2,"expanded":false,"name":"opening","order":1,"parentId":0,"scrollX":756.5,"scrollY":433},
 {"id":3,"expanded":true,"name":"east-gate-event","order":2,"parentId":0,"scrollX":756.5,"scrollY":433},
-null,
-{"id":5,"expanded":true,"name":"east-gate","order":3,"parentId":0,"scrollX":832,"scrollY":640}
+{"id":4,"expanded":true,"name":"tavern","order":6,"parentId":0,"scrollX":832,"scrollY":640},
+{"id":5,"expanded":true,"name":"east-gate","order":3,"parentId":0,"scrollX":832,"scrollY":640},
+{"id":6,"expanded":true,"name":"market","order":5,"parentId":0,"scrollX":832,"scrollY":640},
+{"id":7,"expanded":true,"name":"mill","order":7,"parentId":0,"scrollX":832,"scrollY":640},
+{"id":8,"expanded":true,"name":"monastery","order":8,"parentId":0,"scrollX":502,"scrollY":437.5}
 ]

@@ -376,7 +376,7 @@
         }
 
         x = 0;
-        y = this.textPadding() * 2 + lineHeight * 7;
+        y = this.textPadding() * 2 + lineHeight * 2;
         this.drawTextEx(item.description, x, y);
     };
 
