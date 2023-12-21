@@ -1059,11 +1059,13 @@ Window_NameBox.prototype.constructor = Window_NameBox;
 
 Window_NameBox.prototype.initialize = function(parentWindow) {
     this._parentWindow = parentWindow;
+    var width = ImageManager.loadPicture('UI_name-box').width + eval(Yanfly.Param.MSGNameBoxPadding);
     Window_Base.prototype.initialize.call(this, 0, 0, 240, this.windowHeight());
     this._text = '';
     this._lastNameText = '';
     this._openness = 0;
     this._closeCounter = 0;
+    this._imageBitmap = ImageManager.loadPicture('UI_name-box'); // 加載圖片
     this.deactivate();
     if (eval(Yanfly.Param.MSGNameBoxClear)) {
       this.backOpacity = 0;
@@ -1115,15 +1117,18 @@ Window_NameBox.prototype.update = function() {
 Window_NameBox.prototype.refresh = function(text, position) {
     this.show();
     this._lastNameText = text;
-    this._text = Yanfly.Param.MSGNameBoxText + text;
+    this._text = '　' + Yanfly.Param.MSGNameBoxText + text;
     this._position = position;
-    this.width = this.windowWidth();
+    var width = this._imageBitmap.width + eval(Yanfly.Param.MSGNameBoxPadding);
+    this.width = width;
     this.createContents();
     this.contents.clear();
     this.resetFontSettings();
     this.changeTextColor(this.textColor(Yanfly.Param.MSGNameBoxColor));
+    this.setBackgroundType(2);
     var padding = eval(Yanfly.Param.MSGNameBoxPadding) / 2;
-    this.drawTextEx(this._text, padding, 0, this.contents.width);
+    this.contents.blt(this._imageBitmap, 0, 0, this._imageBitmap.width, this._imageBitmap.height, 0, 0, this._imageBitmap.width, this._imageBitmap.height);
+    this.drawTextEx(this._text, padding, 3, this.contents.width);
     this._parentWindow.adjustWindowSettings();
     this._parentWindow.updatePlacement();
     this.adjustPositionX();
@@ -1131,6 +1136,7 @@ Window_NameBox.prototype.refresh = function(text, position) {
     this.open();
     this.activate();
     this._closeCounter = 4;
+    this.move(130, this.y, this.width, this.height);
     return '';
 };
 

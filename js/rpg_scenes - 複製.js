@@ -1228,20 +1228,12 @@ Scene_Item.prototype.initialize = function() {
 };
 
 Scene_Item.prototype.create = function() {
-                Scene_ItemBase.prototype.create.call(this);
-                this.createHelpWindow();
-                this.createActorWindow();
-                var wy = this._helpWindow.height;
-                var wh = Graphics.boxHeight - wy;
-                this._itemWindow = new Window_ItemList(0, wy, Graphics.boxWidth, wh);
-                this._itemWindow.setHelpWindow(this._helpWindow);
-                this._itemWindow.setHandler('ok',     this.onItemOk.bind(this));
-                this._itemWindow.setHandler('cancel', this.popScene.bind(this));
-                this.addWindow(this._itemWindow);
-                this._itemWindow.setCategory('item');
-                this._itemWindow.activate();
-                this._itemWindow.selectLast();
-        };
+    Scene_ItemBase.prototype.create.call(this);
+    this.createHelpWindow();
+    this.createCategoryWindow();
+    this.createItemWindow();
+    this.createActorWindow();
+};
 
 Scene_Item.prototype.createCategoryWindow = function() {
     this._categoryWindow = new Window_ItemCategory();
