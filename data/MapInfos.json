@@ -2,7 +2,7 @@
 null,
 {"id":1,"expanded":true,"name":"tower","order":8,"parentId":0,"scrollX":832,"scrollY":640},
 {"id":2,"expanded":true,"name":"logo","order":2,"parentId":6,"scrollX":784.5,"scrollY":465.5},
-{"id":3,"expanded":true,"name":"gate-event","order":6,"parentId":0,"scrollX":546,"scrollY":433.5},
+{"id":3,"expanded":true,"name":"gate-event","order":6,"parentId":0,"scrollX":504,"scrollY":433.5},
 {"id":4,"expanded":true,"name":"mill","order":9,"parentId":0,"scrollX":727.5,"scrollY":465.5},
 {"id":5,"expanded":true,"name":"gate","order":7,"parentId":0,"scrollX":698,"scrollY":433.5},
 {"id":6,"expanded":true,"name":"main_UI","order":1,"parentId":0,"scrollX":727.5,"scrollY":465.5},
