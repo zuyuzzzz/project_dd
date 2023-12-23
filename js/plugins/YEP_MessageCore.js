@@ -1117,7 +1117,7 @@ Window_NameBox.prototype.update = function() {
 Window_NameBox.prototype.refresh = function(text, position) {
     this.show();
     this._lastNameText = text;
-    this._text = '　' + Yanfly.Param.MSGNameBoxText + text;
+    this._text = '　　' + Yanfly.Param.MSGNameBoxText + text;
     this._position = position;
     var width = this._imageBitmap.width + eval(Yanfly.Param.MSGNameBoxPadding);
     this.width = width;
@@ -1136,7 +1136,7 @@ Window_NameBox.prototype.refresh = function(text, position) {
     this.open();
     this.activate();
     this._closeCounter = 4;
-    this.move(130, this.y, this.width, this.height);
+    this.move(20, this.y, this.width, this.height);
     return '';
 };
 
